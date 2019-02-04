@@ -31,7 +31,7 @@ Output Layer: Activation Function = Elliot, Slope = 10, Amplify = 1
 
 Hidden Layer: Activation Function = SoftPlus, Slope = 10, Amplify = 10
 
-In the Main Settings set the Min. Network Error to 600, the Scale Factor to 2000 and leave all the other settings with their default values. This example will also converge to a solution fairly quickly
+In the Main Settings set the Min. Network Error to 700, the Scale Factor to 2000 and leave all the other settings with their default values. This example will also converge to a solution fairly quickly
 
 3) Using the Wage.csv dataset the relationship between 'age' and 'wage' can be modelled using the following settings:
 
