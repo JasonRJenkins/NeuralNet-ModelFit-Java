@@ -145,26 +145,6 @@ public class DataTable
         return mCols;
     }
 
-    /**
-     * returns true if the data file has a header row
-     * 
-     * @return true if the data file has a header row
-     */
-    public boolean getHeader()
-    {
-        return mHeader;
-    }
-    
-    /**
-     * sets the header value for the table
-     * 
-     * @param header 
-     */
-    public void setHeader(boolean header)
-    {
-        mHeader = header;
-    }
-    
     /////////////////////////////////////////////////////////////////////
     // Public Methods
     /////////////////////////////////////////////////////////////////////
@@ -647,7 +627,7 @@ public class DataTable
      * 
      * @param colNames the list containing the column names
      */
-    public void setColumnNames(ArrayList<String> colNames)
+    public void SetColumnNames(ArrayList<String> colNames)
     {
         int size = colNames.size();
 
@@ -720,21 +700,19 @@ public class DataTable
         int retVal = 0;
 
         clearTable();
+
         readFromStream(fName, header);
 
-        // set the table header parameter
-        setHeader(header);
-        
         // initialise the alias vector values to zero
         for (int i = 0; i < mCols; i++)
         {
-            mAliasVec.add(0.0);
+                mAliasVec.add(0.0);
         }
 
         // check to see if there was an error reading the file
         if (mRows < 0 || mCols < 0)
         {
-            retVal = -1;
+                retVal = -1;
         }
 
         return retVal;
