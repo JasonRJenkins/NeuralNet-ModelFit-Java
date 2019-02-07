@@ -100,17 +100,17 @@ public class NeuralNet
     private int mNumLayers = 0;
 
     /**
-     * the output layer unit activation function type
+     * the output layer units activation function type
      */
     private ActiveT mOutUnitType = ActiveT.kThreshold;
 
     /**
-     * the output layer unit activation function slope value
+     * the output layer units activation function slope value
      */
     private double mOutUnitSlope = 1;
 
     /**
-     * the output layer unit activation function amplify value
+     * the output layer units activation function amplify value
      */
     private double mOutUnitAmplify = 1;
 
@@ -335,7 +335,7 @@ public class NeuralNet
     }
     
     /**
-     * gets the output unit activation type
+     * gets the output units activation type
      * 
      * @return the output unit activation type
      */
@@ -345,7 +345,7 @@ public class NeuralNet
     }
     
     /**
-     * sets the output unit activation type
+     * sets the output units activation type
      * 
      * @param value the required output unit activation type
      */
@@ -355,7 +355,7 @@ public class NeuralNet
     }
 
     /**
-     * gets the output layer unit activation function slope value
+     * gets the output layer units activation function slope value
      * 
      * @return the output layer unit activation function slope value
      */
@@ -365,7 +365,7 @@ public class NeuralNet
     }
     
     /**
-     * sets the output layer unit activation function slope value
+     * sets the output layer units activation function slope value
      * 
      * @param value the required output layer unit activation function slope value
      */
@@ -379,7 +379,7 @@ public class NeuralNet
     }
 
     /**
-     * gets the output layer unit activation function amplify value
+     * gets the output layer units activation function amplify value
      * 
      * @return the output layer unit activation function amplify value
      */
@@ -389,7 +389,7 @@ public class NeuralNet
     }
 
     /**
-     * sets the output layer unit activation function amplify value
+     * sets the output layer units activation function amplify value
      * 
      * @param value the required output layer unit activation function amplify value
      */
