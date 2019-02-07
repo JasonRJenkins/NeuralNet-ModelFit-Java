@@ -293,6 +293,13 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         outAmpSpinner.setModel(new javax.swing.SpinnerNumberModel(1.0d, 0.01d, 100.0d, 1.0d));
         outAmpSpinner.setToolTipText("used to boost or reduce the output layer units signal value");
+        outAmpSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                outAmpSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Amplify:");
@@ -300,6 +307,13 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         outSlopeSpinner.setModel(new javax.swing.SpinnerNumberModel(1.0d, 1.0E-6d, 1000000.0d, 1.0d));
         outSlopeSpinner.setToolTipText("used to adjust the sensitivity of the output layer units activation function");
+        outSlopeSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                outSlopeSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setText("Slope:");
@@ -374,6 +388,13 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         hidAmpSpinner.setModel(new javax.swing.SpinnerNumberModel(1.0d, 0.01d, 100.0d, 1.0d));
         hidAmpSpinner.setToolTipText("used to boost or reduce the hidden layer units signal value");
+        hidAmpSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                hidAmpSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Amplify:");
@@ -381,6 +402,13 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         hidSlopeSpinner.setModel(new javax.swing.SpinnerNumberModel(1.0d, 1.0E-6d, 1000000.0d, 1.0d));
         hidSlopeSpinner.setToolTipText("used to adjust the sensitivity of the hidden layer units activation function");
+        hidSlopeSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                hidSlopeSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("Slope:");
@@ -424,15 +452,43 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         learnConstSpinner.setModel(new javax.swing.SpinnerNumberModel(0.01d, 0.001d, 10.0d, 0.005d));
         learnConstSpinner.setToolTipText("governs the 'size' of the steps taken down the error surface");
+        learnConstSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                learnConstSpinnerStateChanged(evt);
+            }
+        });
 
         momentSpinner.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, 1.0d, 0.005d));
         momentSpinner.setToolTipText("used to weight the search of the error surface to continue along the same 'direction' as the previous step");
+        momentSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                momentSpinnerStateChanged(evt);
+            }
+        });
 
         minErrorSpinner.setModel(new javax.swing.SpinnerNumberModel(5.0d, 0.0d, 10000.0d, 0.5d));
         minErrorSpinner.setToolTipText("training will stop when the total network error is less than this value");
+        minErrorSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                minErrorSpinnerStateChanged(evt);
+            }
+        });
 
         numIterSpinner.setModel(new javax.swing.SpinnerNumberModel(1000, 100, 500000, 100));
         numIterSpinner.setToolTipText("sets the maximum number of iterations for the training process");
+        numIterSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                numIterSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Momentum:");
@@ -445,12 +501,33 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
         scaleFacSpinner.setModel(new javax.swing.SpinnerNumberModel(1000.0d, 1.0d, 100000.0d, 100.0d));
         scaleFacSpinner.setToolTipText("used to divide the data values to reduce their magnitude - this may improve the fit");
+        scaleFacSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                scaleFacSpinnerStateChanged(evt);
+            }
+        });
 
         initRangeSpinner.setModel(new javax.swing.SpinnerNumberModel(2.0d, 1.0d, 50.0d, 1.0d));
         initRangeSpinner.setToolTipText("sets the range of the random values initially connecting the layers of the network, 2 represents -1 to +1");
+        initRangeSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                initRangeSpinnerStateChanged(evt);
+            }
+        });
 
         numUnitsSpinner.setModel(new javax.swing.SpinnerNumberModel(4, 1, 100, 1));
         numUnitsSpinner.setToolTipText("sets the number of units in the hidden layer");
+        numUnitsSpinner.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                numUnitsSpinnerStateChanged(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel17.setText("Scale Factor:");
@@ -686,15 +763,15 @@ public class ModelFitJFrame extends javax.swing.JFrame
         {
             // display the wait cursor
             setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-                        
-            // load the CSV file containing the training data
-            File selectedFile = fileChooser.getSelectedFile();
-            loadData(selectedFile.getAbsolutePath());
 
             // when new data is aquired the model parameters must be set before we can fit a model
             fitModelBtn.setEnabled(false);
             saveModelBtn.setEnabled(false);
             saveNetworkBtn.setEnabled(false); 
+            
+            // load the CSV file containing the training data
+            File selectedFile = fileChooser.getSelectedFile();
+            loadData(selectedFile.getAbsolutePath());
             
             // reset the cursor
             setCursor(Cursor.getDefaultCursor());
@@ -894,6 +971,61 @@ public class ModelFitJFrame extends javax.swing.JFrame
     {//GEN-HEADEREND:event_hidFuncListValueChanged
         updateInfo();
     }//GEN-LAST:event_hidFuncListValueChanged
+
+    private void outSlopeSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_outSlopeSpinnerStateChanged
+    {//GEN-HEADEREND:event_outSlopeSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_outSlopeSpinnerStateChanged
+
+    private void outAmpSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_outAmpSpinnerStateChanged
+    {//GEN-HEADEREND:event_outAmpSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_outAmpSpinnerStateChanged
+
+    private void hidSlopeSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_hidSlopeSpinnerStateChanged
+    {//GEN-HEADEREND:event_hidSlopeSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_hidSlopeSpinnerStateChanged
+
+    private void hidAmpSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_hidAmpSpinnerStateChanged
+    {//GEN-HEADEREND:event_hidAmpSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_hidAmpSpinnerStateChanged
+
+    private void learnConstSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_learnConstSpinnerStateChanged
+    {//GEN-HEADEREND:event_learnConstSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_learnConstSpinnerStateChanged
+
+    private void momentSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_momentSpinnerStateChanged
+    {//GEN-HEADEREND:event_momentSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_momentSpinnerStateChanged
+
+    private void minErrorSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_minErrorSpinnerStateChanged
+    {//GEN-HEADEREND:event_minErrorSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_minErrorSpinnerStateChanged
+
+    private void numIterSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_numIterSpinnerStateChanged
+    {//GEN-HEADEREND:event_numIterSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_numIterSpinnerStateChanged
+
+    private void scaleFacSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_scaleFacSpinnerStateChanged
+    {//GEN-HEADEREND:event_scaleFacSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_scaleFacSpinnerStateChanged
+
+    private void initRangeSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_initRangeSpinnerStateChanged
+    {//GEN-HEADEREND:event_initRangeSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_initRangeSpinnerStateChanged
+
+    private void numUnitsSpinnerStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_numUnitsSpinnerStateChanged
+    {//GEN-HEADEREND:event_numUnitsSpinnerStateChanged
+        updateInfo();
+    }//GEN-LAST:event_numUnitsSpinnerStateChanged
     
     /////////////////////////////////////////////////////////////////////
     // Private Helper Methods
@@ -1090,6 +1222,7 @@ public class ModelFitJFrame extends javax.swing.JFrame
             dataPreviewTable.setModel(new DefaultTableModel());                        
             xVarList.setModel(new DefaultListModel());
             yVarList.setModel(new DefaultListModel());
+            iterationsLabel.setText(" ");
             
             // update the information text label
             infoLabel.setText("Please select a data file");
@@ -1108,6 +1241,7 @@ public class ModelFitJFrame extends javax.swing.JFrame
 
             // update the information text label
             infoLabel.setText("Please select the variables");
+            iterationsLabel.setText(" ");
         }
     }
     
@@ -1507,6 +1641,8 @@ public class ModelFitJFrame extends javax.swing.JFrame
             {
                 fitModelBtn.setEnabled(true);
             }
+            
+            iterationsLabel.setText(" ");
         }
         
         saveModelBtn.setEnabled(false);

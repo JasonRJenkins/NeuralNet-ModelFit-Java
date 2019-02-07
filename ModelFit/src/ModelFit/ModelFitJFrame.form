@@ -450,6 +450,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="used to boost or reduce the output layer units signal value"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="outAmpSpinnerStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -467,6 +470,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="used to adjust the sensitivity of the output layer units activation function"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="outSlopeSpinnerStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -606,6 +612,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="used to boost or reduce the hidden layer units signal value"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="hidAmpSpinnerStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -623,6 +632,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="used to adjust the sensitivity of the hidden layer units activation function"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="hidSlopeSpinnerStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -657,6 +669,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="governs the &apos;size&apos; of the steps taken down the error surface"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="learnConstSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="momentSpinner">
       <Properties>
@@ -665,6 +680,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="used to weight the search of the error surface to continue along the same &apos;direction&apos; as the previous step"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="momentSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="minErrorSpinner">
       <Properties>
@@ -673,6 +691,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="training will stop when the total network error is less than this value"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="minErrorSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="numIterSpinner">
       <Properties>
@@ -681,6 +702,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="sets the maximum number of iterations for the training process"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numIterSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
@@ -713,6 +737,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="used to divide the data values to reduce their magnitude - this may improve the fit"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="scaleFacSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="initRangeSpinner">
       <Properties>
@@ -721,6 +748,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="sets the range of the random values initially connecting the layers of the network, 2 represents -1 to +1"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="initRangeSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="numUnitsSpinner">
       <Properties>
@@ -729,6 +759,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="sets the number of units in the hidden layer"/>
       </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numUnitsSpinnerStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
