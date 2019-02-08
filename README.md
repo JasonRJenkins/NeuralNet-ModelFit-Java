@@ -41,5 +41,5 @@ Output Layer: Activation Function = Elliot, Slope = 10, Amplify = 1
 
 Hidden Layer: Activation Function = Unipolar, Slope = 10, Amplify = 10
 
-In the Main Settings set the Min. Network Error to 2450, the Scale Factor to 1000, the Number of Iterations to 10000, the Initial Range to 10 and leave all the other settings with their default values. In comparison to the other examples this example will converge to a solution fairly slowly owing to the large size of the dataset.
+In the Main Settings set the Min. Network Error to 2450, the Scale Factor to 1000, the Number of Iterations to 10000 and the Initial Range to 10 leaving all the other settings with their default values. In comparison to the other examples this example will converge to a solution fairly slowly owing to the large size of the dataset.
 
